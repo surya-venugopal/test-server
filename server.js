@@ -1,20 +1,18 @@
-const express = require('express');
+const express = require("express");
+
 const app = express();
-const PORT = process.env.PORT;
 
-// API 1: Example GET API
-app.get('/api/data1', (req, res) => {
-    // Process your data and send response
-    res.json({ message: 'API 1 response' });
+app.get("/a1", (req, res) => {
+    res.send("1");
 });
 
-// API 2: Example POST API
-app.post('/api/data2', (req, res) => {
-    // Process incoming data (if any) and send response
-    res.json({ message: 'API 2 response' });
+app.get("/a2", (req, res) => {
+    res.send("2");
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(5000, () => {
+    console.log("Running on port 5000.");
 });
+
+// Export the Express API
+module.exports = app;
