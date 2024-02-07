@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 // API 1: Example GET API
 app.get('/api/data1', (req, res) => {
