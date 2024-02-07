@@ -10,7 +10,7 @@ app.get("/a2", (req, res) => {
     res.send("2");
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("Running on port 5000.");
 });
 
