@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
     res.send(req.query);
 });
 
+app.get('/get_data', (req, res) => {
+    res.send(req.query);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
